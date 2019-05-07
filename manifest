@@ -1,0 +1,22 @@
+# Channel Details
+title=WDW News Today
+subtitle=The worldwide leader in Disney Parks News
+major_version=1
+minor_version=0
+build_version=00001
+
+# Channel Assets
+mm_icon_focus_hd=pkg:/images/channeltv-poster-hd.png
+mm_icon_focus_sd=pkg:/images/channeltv-poster-hd.png
+mm_icon_side_hd=pkg:/images/channeltv-poster-hd.png
+mm_icon_side_sd=pkg:/images/channeltv-poster-hd.png
+
+# Splash Screen + Loading Screen Artwork
+splash_screen_sd=pkg:/images/nova_bg.png
+splash_screen_hd=pkg:/images/nova_bg.png
+splash_screen_fhd=pkg:/images/nova_bg.png
+splash_color=#1b7bf3
+splash_min_time=3000
+
+# Resolution
+ui_resolutions=fhd

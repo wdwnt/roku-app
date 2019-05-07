@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="NTunesScene" extends="Scene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd" initialFocus="audio_control_button">
+    <script type="text/brightscript" uri="pkg:/components/NTunesScene.brs" />
+    <children>
+        <Group id="artwork">
+            <Poster
+                id="current_show_image_path"
+                width="500"
+                height="500"
+                translation="[100, 100]" />
+        </Group>
+        <Group id="song_info">
+            <Label id="title" text="Now Playing" font="font:LargeBoldSystemFont" translation="[700, 100]" />
+            <Label id="current_track_title" font="font:MediumBoldSystemFont" text="Loading..." translation="[700, 160]" />
+            <Label id="current_track_artist_name" translation="[700, 220]" />
+            <Label id="current_show_name" translation="[700, 280]" />
+        </Group>
+        <Group id="control_buttons">
+            <!-- <Label
+                id="Play"
+                color="0xFFFFFFFF"
+                width="100"
+                height="120"
+                text="N"
+                translation="[910,10]">
+                <Font
+                    id="Sosa-Regular"
+                    role="font"
+                    uri="pkg:/fonts/sosa-regular-webfont.ttf"
+                    size="90" />
+            </Label> -->
+        </Group>
+        <Audio id="audio_player" />
+        <Timer id="refresh_timer" repeat="true" duration="5" />
+    </children>
+</component>

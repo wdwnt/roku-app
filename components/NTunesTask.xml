@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="NTunesTask" extends="Task">
+
+<interface>
+    <field id="current_track_title" type="string" />
+    <field id="current_track_artist_name" type="string" />
+    <field id="current_show_name" type="string" />
+    <field id="current_show_image_path" type="string" />
+</interface>
+
+<script type="text/brightscript">
+<![CDATA[
+
+sub init()
+	m.top.functionName = "executeTask"
+end sub
+
+function executeTask() as void
+    url = CreateObject("roUrlTransfer")
+    url.SetCertificatesFile("common:/certs/ca-bundle.crt")
+    url.InitClientCertificates()
+    url.setUrl("https://fastpass.wdwnt.com/radio")
+
+    json = ParseJson(url.GetToString())
+
+    m.top.current_track_title = json.current.metadata.track_title
+    m.top.current_track_artist_name = json.current.metadata.artist_name
+    m.top.current_show_name = json.currentShow[0].name
+    m.top.current_show_image_path = json.currentShow[0].image_path
+end function
+
+]]>
+</script>
+
+</component>
