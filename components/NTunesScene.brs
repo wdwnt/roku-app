@@ -1,6 +1,10 @@
-sub init()
+sub show(args as Object)
   m.top.setFocus(true)
+
   m.is_playing = false
+
+  m.top.backgroundColor = "0x0960CCFF"
+  m.top.backgroundUri = ""
 
   setUpLabels()
 
@@ -40,10 +44,25 @@ function setUpAudio() as void
 
   m.audio = m.top.findNode("audio_player")
   m.audio.content = audiocontent
+
+  m.audiobutton = m.top.findNode("audio_control_button")
+  m.audiobutton.observeField("buttonSelected", "playAudio")
 end function
 
 function refreshData() as void
   m.nTunesTask.control = "RUN"
+end function
+
+function playAudio() as void
+  if (m.is_playing) then
+    m.audio.control = "stop"
+    m.audiobutton.text = "Play"
+    m.is_playing = false
+  else
+    m.audio.control = "play"
+    m.audiobutton.text = "Stop"
+    m.is_playing = true
+  end if
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
@@ -51,14 +70,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
 
   if press then
     if (key = "play") then
-      if (m.is_playing) then
-        m.audio.control = "stop"
-        m.is_playing = false
-      else
-        m.audio.control = "play"
-        m.is_playing = true
-      end if
-
+      playAudio()
       handled = true
     endif
   endif

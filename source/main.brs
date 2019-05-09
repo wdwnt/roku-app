@@ -20,3 +20,7 @@ sub showChannelSGScreen()
     end if
     end while
 end sub
+
+function GetSceneName() as String
+    return "NTunesScene"
+end function

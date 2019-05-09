@@ -20,3 +20,6 @@ splash_min_time=3000
 
 # Resolution
 ui_resolutions=fhd
+
+# Required for SGDEX
+bs_libs_required=roku_ads_lib
