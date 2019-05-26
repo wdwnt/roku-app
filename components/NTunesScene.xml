@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="NTunesScene" extends="BaseScene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd" initialFocus="audio_control_button">
+<component name="NTunesScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd" initialFocus="audio_control_button">
     <script type="text/brightscript" uri="pkg:/components/NTunesScene.brs" />
     <children>
-        <Group id="artwork">
-            <Poster
-                id="current_show_image_path"
-                width="500"
-                height="500"
-                translation="[100, 100]" />
+        <Group id="ntunesGroup">
+            <Group id="artwork">
+                <Poster
+                    id="current_show_image_path"
+                    width="500"
+                    height="500"
+                    translation="[100, 100]" />
+            </Group>
+            <Group id="song_info" translation="[700, 100]">
+                <Label id="title" text="Now Playing" font="font:LargeBoldSystemFont" translation="[0, 0]" />
+                <Label id="current_track_title" font="font:MediumBoldSystemFont" text="Loading..." translation="[0, 60]" />
+                <Label id="current_track_artist_name" translation="[0, 120]" />
+                <Label id="current_show_name" translation="[0, 180]" />
+            </Group>
+            <Group>
+                <Button
+                    id="audio_control_button"
+                    translation="[100, 700]"
+                    text="Play" />
+            </Group>
+            <Audio id="audio_player" />
+            <Timer id="refresh_timer" repeat="true" duration="10" />
         </Group>
-        <Group id="song_info" translation="[700, 100]">
-            <Label id="title" text="Now Playing" font="font:LargeBoldSystemFont" translation="[0, 0]" />
-            <Label id="current_track_title" font="font:MediumBoldSystemFont" text="Loading..." translation="[0, 60]" />
-            <Label id="current_track_artist_name" translation="[0, 120]" />
-            <Label id="current_show_name" translation="[0, 180]" />
-        </Group>
-        <Group>
-            <Button
-                id="audio_control_button"
-                translation="[100, 700]"
-                text="Play" />
-        </Group>
-        <Audio id="audio_player" />
-        <Timer id="refresh_timer" repeat="true" duration="10" />
     </children>
 </component>

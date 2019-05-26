@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="NTunesNode" extends="ContentNode">
+    <interface>
+        <field id="current_track_title" type="string" />
+        <field id="current_track_artist_name" type="string" />
+        <field id="current_show_name" type="string" />
+        <field id="current_show_image_path" type="string" />
+        <field id="next_track_title" type="string" />
+        <field id="next_track_artist_name" type="string" />
+    </interface>
+</component>

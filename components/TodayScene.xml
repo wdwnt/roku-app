@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="TodayScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/TodayScene.brs" />
+    <children>
+        <Group id="todayGroup">
+            <Group id="artwork">
+                <Poster
+                    id="park_image"
+                    height="1080"
+                    width="1920"
+                    translation="[0, 0]" />
+            </Group>
+            <Group id="park_info" translation="[100, 100]">
+                <Label id="name" font="font:LargeBoldSystemFont" translation="[0, 0]" />
+                <Label id="todaysHoursLabel" font="font:MediumBoldSystemFont" translation="[0, 60]" text="Today's hours:" />
+                <Label id="todaysHours" font="font:MediumBoldSystemFont" translation="[270, 60]" />
+                <Label id="tomorrowsHoursLabel" font="font:MediumBoldSystemFont" translation="[0, 120]" text="Tomorrow's hours:" />
+                <Label id="tomorrowsHours" font="font:MediumBoldSystemFont" translation="[345, 120]" />
+            </Group>
+            <Audio id="audio_player" />
+            <Timer id="refresh_timer" repeat="true" duration="10" />
+        </Group>
+    </children>
+</component>

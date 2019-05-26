@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="ParkNode" extends="ContentNode">
+    <interface>
+        <field id="name" type="string" />
+        <field id="imageUrl" type="string" />
+        <field id="todaysHours" type="string" />
+        <field id="tomorrowsHours" type="string" />
+    </interface>
+</component>

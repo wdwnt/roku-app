@@ -1,10 +1,9 @@
-sub show(args as Object)
-  m.top.setFocus(true)
+sub Init()
+  m.top.ObserveField("wasShown", "OnWasShown")
+end sub
 
+sub OnWasShown()
   m.is_playing = false
-
-  m.top.backgroundColor = "0x0960CCFF"
-  m.top.backgroundUri = ""
 
   setUpLabels()
 
@@ -26,10 +25,7 @@ end function
 
 function buildNTunesTask() as void
   m.nTunesTask = CreateObject("roSGNode", "NTunesTask")
-  m.nTunesTask.ObserveField("current_track_title", "onCurrentTrackTitleChanged")
-  m.nTunesTask.ObserveField("current_track_artist_name", "onCurrentTrackArtistNameChanged")
-  m.nTunesTask.ObserveField("current_show_name", "onCurrentShowNameChanged")
-  m.nTunesTask.ObserveField("current_show_image_path", "onCurrentShowImagePathChanged")
+  m.nTunesTask.ObserveField("current_info", "onCurrentInfoChanged")
 end function
 
 function setUpRefreshTimer() as void
@@ -76,18 +72,10 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
   endif
 end function
 
-function onCurrentTrackTitleChanged() as void
-  m.current_track_title.text = m.nTunesTask.current_track_title
-end function
-
-function onCurrentTrackArtistNameChanged() as void
-  m.current_track_artist_name.text = m.nTunesTask.current_track_artist_name
-end function
-
-function onCurrentShowNameChanged() as void
-  m.current_show_name.text = m.nTunesTask.current_show_name
-end function
-
-function onCurrentShowImagePathChanged() as void
-  m.current_show_image_path.uri = m.nTunesTask.current_show_image_path
-end function
+sub onCurrentInfoChanged()
+  current_info = m.nTunesTask.current_info["ntunes"]
+  m.current_track_title.text = current_info.current_track_title
+  m.current_track_artist_name.text = current_info.current_track_artist_name
+  m.current_show_name.text = current_info.current_show_name
+  m.current_show_image_path.uri = current_info.current_show_image_path
+end sub
