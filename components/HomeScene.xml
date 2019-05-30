@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="HomeScene" extends="BaseScene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
     <script type="text/brightscript" uri="pkg:/components/HomeScene.brs" />
+    <children>
+        <GridView id="grid" />
+    </children>
 </component>

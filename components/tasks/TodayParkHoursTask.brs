@@ -1,14 +1,6 @@
-sub init()
-  m.top.functionName = "executeTask"
-end sub
-
 function executeTask() as void
-  url = CreateObject("roUrlTransfer")
-  url.SetCertificatesFile("common:/certs/ca-bundle.crt")
-  url.InitClientCertificates()
-  url.setUrl("https://wdwntnowapi.azurewebsites.net/api/v2/mobile/parks/wdw")
-
-  json = ParseJson(url.GetToString())
+  urlTransfer = createUrlTransfer("https://wdwntnowapi.azurewebsites.net/api/v2/mobile/parks/wdw")
+  json = getJson(urlTransfer)
 
   parks = CreateObject("roAssociativeArray")
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="NTunesTask" extends="Task">
+<component name="NTunesTask" extends="BaseTask">
     <interface>
         <field id="current_info" type="associativearray" />
     </interface>

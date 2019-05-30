@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="DateTimeNode" extends="ContentNode">
+    <interface>
+        <field id="day_of_the_week" type="string" />
+        <field id="month_day" type="string" />
+        <field id="time" type="string" />
+    </interface>
+</component>

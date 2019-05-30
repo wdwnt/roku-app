@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PodcastScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/PodcastScene.brs" />
+    <children>
+        <Group>
+            <LabelList
+                id="audioLabelList"
+                translation="[180, 100]"
+                itemSize="[500, 60]" />
+            <Poster
+                id="episode_poster"
+                uri="pkg:/images/channeltv-poster-hd.png"
+                height="250"
+                width="250"
+                translation="[800, 100]" />
+            <Label
+                id="episode_description"
+                width="800"
+                wrap="true"
+                translation="[800, 400]" />
+        </Group>
+  </children>
+</component>

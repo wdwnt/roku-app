@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="DateTimeTask" extends="BaseTask">
+    <interface>
+        <field id="datetime_info" type="associativearray" />
+    </interface>
+
+    <script type="text/brightscript" uri="DateTimeTask.brs" />
+</component>

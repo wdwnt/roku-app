@@ -21,6 +21,10 @@ function setUpLabels() as void
   m.current_track_artist_name = m.top.findNode("current_track_artist_name")
   m.current_show_name = m.top.findNode("current_show_name")
   m.current_show_image_path = m.top.findNode("current_show_image_path")
+  m.next_track_title = m.top.findNode("next_track_title")
+  m.next_track_artist_name = m.top.findNode("next_track_artist_name")
+
+  m.audio_indicator = m.top.findNode("audio_indicator")
 end function
 
 function buildNTunesTask() as void
@@ -40,9 +44,6 @@ function setUpAudio() as void
 
   m.audio = m.top.findNode("audio_player")
   m.audio.content = audiocontent
-
-  m.audiobutton = m.top.findNode("audio_control_button")
-  m.audiobutton.observeField("buttonSelected", "playAudio")
 end function
 
 function refreshData() as void
@@ -52,11 +53,11 @@ end function
 function playAudio() as void
   if (m.is_playing) then
     m.audio.control = "stop"
-    m.audiobutton.text = "Play"
+    ' m.audio_indicator.text = "&#xe037;"
     m.is_playing = false
   else
     m.audio.control = "play"
-    m.audiobutton.text = "Stop"
+    ' m.audio_indicator.text = "&#xe047;"
     m.is_playing = true
   end if
 end function
@@ -78,4 +79,6 @@ sub onCurrentInfoChanged()
   m.current_track_artist_name.text = current_info.current_track_artist_name
   m.current_show_name.text = current_info.current_show_name
   m.current_show_image_path.uri = current_info.current_show_image_path
+  m.next_track_title.text = current_info.next_track_title
+  m.next_track_artist_name.text = current_info.next_track_artist_name
 end sub

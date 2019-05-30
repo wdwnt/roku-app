@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="WeatherNode" extends="ContentNode">
+    <interface>
+        <field id="currently_summary" type="string" />
+        <field id="currently_icon" type="string" />
+        <field id="currently_temperature_f" type="integer" />
+        <field id="currently_temperature_c" type="integer" />
+    </interface>
+</component>

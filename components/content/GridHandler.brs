@@ -1,7 +1,6 @@
 sub GetContent()
-    ' feed = ReadAsciiFile("pkg:/config/menu.json")
-    ' json = ParseJson(feed)
-    json = ParseJson("{""WDWNT"":[{""id"":0,""title"":""WDWNTunes"",""shortDescription"":""Broadcasting Magic, Music, and Mayhem"",""thumbnail"":""https://wdwnt.com/wp-content/uploads/2017/11/WDWNTunes_v3_600.png""}, {""id"":1,""title"":""Today at WDW"",""shortDescription"":""View today's and tomorrow's park hours as you would on resort TV!"",""thumbnail"":""https://wdwntnow.oseast-us-1.phoenixnap.com/images/theme-park/80007944/01.jpg""}]}")
+    feed = ReadAsciiFile("pkg:/components/config/menu.json")
+    json = ParseJson(feed)
     rootNodeArray = ParseJsonToNodeArray(json)
     m.top.content.AppendChildren(rootNodeArray)
 end sub
