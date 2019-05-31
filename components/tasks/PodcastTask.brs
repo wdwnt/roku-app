@@ -1,5 +1,5 @@
 function executeTask() as void
-  urlTransfer = createUrlTransfer("https://fastpass.wdwnt.com/podcasts")
+  urlTransfer = createUrlTransfer("https://fastpass.wdwnt.com/podcasts?noplayer")
   json = getJson(urlTransfer)
 
   content = createObject("roSGNode", "ContentNode")
@@ -10,7 +10,7 @@ function executeTask() as void
     podcast_content = content.CreateChild("ContentNode")
     podcast_content.id = podcast.id
     podcast_content.title = podcast.title
-    podcast_content.url = podcast.short_URL
+    podcast_content.url = podcast.media_url
     podcast_content.hdPosterUrl = podcast.featured_image
 
     description = htmlRegex.ReplaceAll(podcast.content, "")
