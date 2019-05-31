@@ -11,7 +11,7 @@
                     translation="[100, 100]" />
             </Group>
             <Group id="song_info" translation="[700, 100]">
-                <Label id="title" text="Now Playing" color="0x000000FF">
+                <Label id="title" text="Now Playing" color="0xFFFFFFFF">
                     <Font
                         role="font"
                         uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
@@ -20,7 +20,7 @@
                     />
                 </Label>
                 <LayoutGroup translation="[0, 120]">
-                    <Label id="current_show_name" color="0x000000FF">
+                    <Label id="current_show_name" color="0xFFFFFFFF">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
@@ -28,7 +28,7 @@
                             size="30"
                         />
                     </Label>
-                    <Label id="current_track_title" text="Loading..." color="0x000000FF" width="1200" wrap="true">
+                    <Label id="current_track_title" text="Loading..." color="0xFFFFFFFF" width="1200" wrap="true">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_45_book_latin.ttf"
@@ -36,7 +36,7 @@
                             size="65"
                         />
                     </Label>
-                    <Label id="current_track_artist_name" color="0x000000FF">
+                    <Label id="current_track_artist_name" color="0xFFFFFFFF">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
@@ -46,7 +46,7 @@
                     </Label>
                 </LayoutGroup>
                 <LayoutGroup translation="[0, 400]">
-                    <Label id="next_track_info_title" text="Up Next" color="0x000000FF">
+                    <Label id="next_track_info_title" text="Up Next" color="0xFFFFFFFF">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_45_book_latin.ttf"
@@ -54,7 +54,7 @@
                             size="45"
                         />
                     </Label>
-                    <Label id="next_track_title" color="0x000000FF">
+                    <Label id="next_track_title" color="0xFFFFFFFF">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
@@ -62,7 +62,7 @@
                             size="30"
                         />
                     </Label>
-                    <Label id="next_track_artist_name" color="0x000000FF">
+                    <Label id="next_track_artist_name" color="0xFFFFFFFF">
                         <Font
                             role="font"
                             uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
@@ -73,7 +73,7 @@
                 </LayoutGroup>
             </Group>
             <Group id="audio_indicator_group" translation="[100, 900]">
-                <Label id="audio_indicator" text="&#xe037;" color="0x000000FF">
+                <Label id="audio_indicator" text="&#xe037;" color="0xFFFFFFFF">
                     <Font
                         role="font"
                         uri="pkg:/components/fonts/MaterialIcons-Regular.ttf"

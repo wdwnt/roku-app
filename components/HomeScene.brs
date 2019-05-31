@@ -33,7 +33,7 @@ function ShowView(selectedIndex as integer)
   viewToShow = "NTunesScene"
 
   if selectedIndex = 0 then
-    updateTheme("0xFFFFFFFF")
+    updateTheme("0x121212FF")
   end if
 
   if selectedIndex = 1 then viewToShow = "PodcastScene"
