@@ -3,12 +3,12 @@
 		"id": 0,
 		"title": "WDWNTunes",
 		"shortDescription": "Broadcasting Magic, Music, and Mayhem",
-		"thumbnail": "https://wdwnt.com/wp-content/uploads/2017/11/WDWNTunes_v3_600.png"
+		"thumbnail": "https://cdn3.wdwnt.com/WDWNTunes_600x334.png"
 	}, {
 		"id": 1,
 		"title": "Podcasts",
 		"shortDescription": "Listen to the latest news and shows from WDWNT",
-		"thumbnail": "https://download.wdwnt.com/wdwnt/podcast-cover-photo.jpg"
+		"thumbnail": "https://cdn3.wdwnt.com/podcast-cover-photo_600x334.png"
 	}, {
 		"id": 2,
 		"title": "Today at WDW",
