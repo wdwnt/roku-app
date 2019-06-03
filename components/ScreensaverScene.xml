@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ScreensaverScene" extends="Scene" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/ScreensaverScene.brs" />
+    <children>
+			<Poster
+				id="image"
+				height="1080"
+				width="1920"
+				translation="[0, 0]" />
+			<Rectangle
+				id="post_title_bar"
+				height="200"
+				width="1920"
+				color="0x000000FF"
+				opacity="0.8"
+				translation="[0,880]" />
+			<Label
+				id="post_title"
+				color="0xFFFFFFFF"
+				width="1900"
+				wrap="true"
+				translation="[20, 900]" />
+			<Timer id="changepost_timer" repeat="true" duration="10" />
+	</children>
+</component>

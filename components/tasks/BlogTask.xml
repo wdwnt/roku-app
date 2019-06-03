@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="BlogTask" extends="BaseTask">
+    <interface>
+        <field id="posts" type="node" />
+    </interface>
+
+    <script type="text/brightscript" uri="BlogTask.brs" />
+</component>
