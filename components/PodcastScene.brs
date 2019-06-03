@@ -3,12 +3,23 @@ sub Init()
 end sub
 
 sub OnWasShown()
-  m.episode_poster = m.top.findNode("episode_poster")
+  m.play_bar = m.top.findNode("play_bar")
+  m.show_art = m.top.findNode("show_art")
+  m.Play = m.top.findNode("Play")
+
+  ' m.global.observeField("FF", "FF")
+  ' m.global.observeField("Rewind", "Rewind")
+
   m.episode_description = m.top.findNode("episode_description")
 
   m.audiolist = m.top.findNode("audioLabelList")
-  m.audiolist.observeField("itemFocused", "setaudio")
+  m.audiolist.observeField("itemFocused", "updateFocused")
   m.audiolist.observeField("itemSelected", "playaudio")
+
+  ' font = createObject("RoSGNode", "Font")
+  ' font.uri = "pkg:/components/fonts/avenir_35_light_latin.ttf"
+  ' m.audiolist.focusedFont = font
+  ' m.audiolist.font = font
 
   m.audio = createObject("RoSGNode", "Audio")
   m.audio.observeField("state", "controlaudioplay")
@@ -23,24 +34,33 @@ sub showaudiolist()
   m.audiolist.setFocus(true)
 end sub
 
-sub setaudio()
-  episode = m.audiolist.content.getChild(m.audiolist.itemFocused)
+function getSelectedEpisode() as Object
+  return m.audiolist.content.getChild(m.audiolist.itemFocused)
+end function
 
-  m.episode_poster.uri = episode.hdPosterUrl
+sub updateFocused()
+  episode = getSelectedEpisode()
+
+  m.show_art.uri = episode.hdPosterUrl
   m.episode_description.text = episode.Description
-  m.audio.content = episode
 end sub
 
 sub playaudio()
+  episode = getSelectedEpisode()
+  m.audio.content = episode
+
   m.audio.control = "stop"
   m.audio.control = "none"
   m.audio.control = "play"
+
+  m.Play.text = "O"
 end sub
 
 sub controlaudioplay()
   if (m.audio.state = "finished")
     m.audio.control = "stop"
     m.audio.control = "none"
+    m.Play.text = "N"
   end if
 end sub
 
@@ -49,9 +69,18 @@ function onKeyEvent(key as String,press as Boolean) as Boolean
     if key = "back"
       if (m.audio.state = "playing")
         m.audio.control = "stop"
+        m.Play.text = "N"
         return true
       end if
     end if
   end if
   return false
 end function
+
+' sub FF()
+'     skip10Seconds(true)
+' end sub
+
+' sub Rewind()
+'     skip10Seconds(false)
+' end sub

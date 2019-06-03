@@ -6,18 +6,90 @@
             <LabelList
                 id="audioLabelList"
                 translation="[180, 100]"
-                itemSize="[500, 60]" />
-            <Poster
-                id="episode_poster"
-                uri="pkg:/images/channeltv-poster-hd.png"
-                height="250"
-                width="250"
-                translation="[800, 100]" />
+                focusedColor="0xFFFFFFFF"
+                focusBitmapUri=""
+                focusFootprintBitmapUri=""
+                color="0x121212FF"
+                itemSize="[500, 60]">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                    id="avenir-light"
+                    size="30" />
+                <Font
+                    role="focusedFont"
+                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                    id="avenir-light"
+                    size="30" />
+            </LabelList>
             <Label
                 id="episode_description"
                 width="800"
                 wrap="true"
-                translation="[800, 400]" />
+                color="0xFFFFFFFF"
+                translation="[800, 100]">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                    id="avenir-light"
+                    size="30" />
+            </Label>
+        </Group>
+        <Group translation="[0, -30]">
+            <Rectangle
+				id="play_bar"
+				height="200"
+				width="1920"
+				color="0x000000FF"
+				opacity="0.8"
+				translation="[0,930]">
+                <Poster
+					id="show_art"
+					height="150"
+					width="150"
+					loadWidth="150"
+					loadHeight="150"
+					translation="[42, 15]" />
+                <Label
+					id="Play"
+					color="0xFFFFFFFF"
+					width="100"
+					height="120"
+					text="N"
+					translation="[910, 35]">
+					<Font
+						id="Sosa-Regular"
+						role="font"
+						uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
+						size="90" />
+				</Label>
+				<Label
+					id="FF"
+					color="0xFFFFFFFF"
+					width="100"
+					height="120"
+					text="T"
+					translation="[810, 35]">
+					<Font
+						id="Sosa-Regular"
+						role="font"
+						uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
+						size="90" />
+				</Label>
+				<Label
+					id="Rewind"
+					color="0xFFFFFFFF"
+					width="100"
+					height="120"
+					text="S"
+					translation="[1010, 35]">
+					<Font
+						id="Sosa-Regular"
+						role="font"
+						uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
+						size="90" />
+				</Label>
+            </Rectangle>
         </Group>
   </children>
 </component>
