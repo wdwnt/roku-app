@@ -72,12 +72,12 @@
                     </Label>
                 </LayoutGroup>
             </Group>
-            <Group id="audio_indicator_group" translation="[100, 900]">
-                <Label id="audio_indicator" text="&#xe037;" color="0xFFFFFFFF">
+            <Group id="audio_indicator_group" translation="[960, 900]">
+                <Label id="audio_indicator" text="N" color="0xFFFFFFFF">
                     <Font
                         role="font"
-                        uri="pkg:/components/fonts/MaterialIcons-Regular.ttf"
-                        id="materialicons-regular"
+                        uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
+                        id="sosa-regular"
                         size="150"
                     />
                 </Label>

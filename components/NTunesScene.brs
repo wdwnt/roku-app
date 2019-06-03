@@ -53,11 +53,11 @@ end function
 function playAudio() as void
   if (m.is_playing) then
     m.audio.control = "stop"
-    ' m.audio_indicator.text = "&#xe037;"
+    m.audio_indicator.text = "N"
     m.is_playing = false
   else
     m.audio.control = "play"
-    ' m.audio_indicator.text = "&#xe047;"
+    m.audio_indicator.text = "O"
     m.is_playing = true
   end if
 end function
