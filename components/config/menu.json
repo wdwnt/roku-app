@@ -3,16 +3,21 @@
 		"id": 0,
 		"title": "WDWNTunes",
 		"shortDescription": "Broadcasting Magic, Music, and Mayhem",
-		"thumbnail": "https://cdn3.wdwnt.com/WDWNTunes_600x334.png"
+		"thumbnail": "https://cdn3.wdwnt.com/images/WDWNTunes_600x334.png"
 	}, {
 		"id": 1,
 		"title": "Podcasts",
 		"shortDescription": "Listen to the latest news and shows from WDWNT",
-		"thumbnail": "https://cdn3.wdwnt.com/podcast-cover-photo_600x334.png"
+		"thumbnail": "https://cdn3.wdwnt.com/images/podcast-cover-photo_600x334.png"
 	}, {
 		"id": 2,
 		"title": "Today at WDW",
 		"shortDescription": "View today's park hours as you would on resort TV!",
-		"thumbnail": "https://wdwntnow.oseast-us-1.phoenixnap.com/images/theme-park/80007944/01.jpg"
+		"thumbnail": "https://cdn3.wdwnt.com/images/now/theme-park/80007944/01.jpg"
+	}, {
+		"id": 3,
+		"title": "Horizons 1",
+		"shortDescription": "A fun display that resembles the board at the entrance of Horizons",
+		"thumbnail": "https://cdn3.wdwnt.com/images/misc/horizons.jpg"
 	}]
 }

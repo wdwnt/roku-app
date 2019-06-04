@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HorizonsScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="pkg:/components/HorizonsScene.brs" />
+    <children>
+        <Timer id="textblink_timer" repeat="true" duration="1.25" />
+        <Audio id="audio" />
+        <Group id="left_side" translation="[20, 0]">
+            <Label id="futureport" text="FUTUREPORT" color="0xFFCC00FF" translation="[0, 0]">
+                <Font role="font" uri="pkg:/components/fonts/epcot.ttf" id="epcot" size="100" />
+            </Label>
+            <Rectangle height="5" width="900" color="0xFFCC00FF" translation="[0, 120]" />
+            <Group id="left_side_title_row" translation="[0, 130]">
+                <Label text="FLIGHT" color="0x0000DDFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="DESTINATION" color="0x0000DDFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SERVICE" color="0x0000DDFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="GATE" color="0x0000DDFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="STATUS" color="0x0000DDFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0xFFCC00FF" translation="[0, 180]" />
+            <Group id="left_side_row_1" translation="[0, 190]">
+                <Label text="24" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="MESA VERDE" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="LEVEXPRESS" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="9B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="FINAL CALL" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 240]" />
+            <Group id="left_side_row_2" translation="[0, 250]">
+                <Label id="left_side_row_2_flight" text="83" color="0xFFCC00FF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label id="left_side_row_2_destination" text="HORIZONS" color="0xFFCC00FF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label id="left_side_row_2_service" text="SHUTTLE" color="0xFFCC00FF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label id="left_side_row_2_gate" text="4A" color="0xFFCC00FF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label id="left_side_row_2_status" text="NOW BOARDING" color="0xFFCC00FF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 300]" />
+            <Group id="left_side_row_3" translation="[0, 310]">
+                <Label text="102" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="VILLE-DU-PIER" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SKYTRAM" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="7B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 360]" />
+            <Group id="left_side_row_4" translation="[0, 370]">
+                <Label text="5" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="BRAVA CENTAURI" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SPACE SHUTTLE" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="3A" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="PRE-BOARDING" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 420]" />
+            <Group id="left_side_row_5" translation="[0, 430]">
+                <Label text="18" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="DUODRO ATLANTICA" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SEATRAM" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="6B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="NOW BOARDING" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 480]" />
+            <Group id="left_side_row_6" translation="[0, 490]">
+                <Label text="904" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ASTRAL BASE 4" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SPACE SHUTTLE" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="1B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 540]" />
+        </Group>
+
+        <Group id="right_side" translation="[960, 0]">
+            <Label id="departures" text="DEPARTURES" color="0x0000DDFF" translation="[0, 0]">
+                <Font role="font" uri="pkg:/components/fonts/epcot.ttf" id="epcot" size="100" />
+            </Label>
+            <Rectangle height="5" width="900" color="0xFFCC00FF" translation="[0, 120]" />
+            <Group id="right_side_title_row" translation="[0, 130]">
+                <Label text="FLIGHT" color="0x0000DDFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="DESTINATION" color="0x0000DDFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SERVICE" color="0x0000DDFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="GATE" color="0x0000DDFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="STATUS" color="0x0000DDFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0xFFCC00FF" translation="[0, 180]" />
+            <Group id="right_side_row_1" translation="[0, 190]">
+                <Label text="40" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SEA CASTLE" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SKYLIFT" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="2A" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="PRE-BOARD" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 240]" />
+            <Group id="right_side_row_2" translation="[0, 250]">
+                <Label text="135" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="VILLA DEL SOL" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="LEVEXPRESS" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="8B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 300]" />
+            <Group id="right_side_row_3" translation="[0, 310]">
+                <Label text="79" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="NOVA CITE" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SHUTTLE" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="2A" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 360]" />
+            <Group id="right_side_row_4" translation="[0, 370]">
+                <Label text="110" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="VILLE-DU-PIER" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SEATRAM" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="6B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 420]" />
+            <Group id="right_side_row_5" translation="[0, 430]">
+                <Label text="909" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ASTRAL BASE 3" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SPACE SHUTTLE" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="4B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 480]" />
+            <Group id="right_side_row_6" translation="[0, 490]">
+                <Label text="72" color="0xFFFFFFFF" translation="[0, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="OMEGA CENTAURI" color="0xFFFFFFFF" translation="[100, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="SPACE SHUTTLE" color="0xFFFFFFFF" translation="[350, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="3B" color="0xFFFFFFFF" translation="[550, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+                <Label text="ON TIME" color="0xFFFFFFFF" translation="[630, 0]">
+                    <Font role="font" uri="pkg:/components/fonts/digital-display.ttf" id="digital-display" size="40" />
+                </Label>
+            </Group>
+            <Rectangle height="5" width="900" color="0x0000DDFF" translation="[0, 540]" />
+        </Group>
+    </children>
+</component>

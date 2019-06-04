@@ -39,6 +39,11 @@ function ShowView(selectedIndex as integer)
   if selectedIndex = 1 then viewToShow = "PodcastScene"
   if selectedIndex = 2 then viewToShow = "TodayScene"
 
+  if selectedIndex = 3 then
+    viewToShow = "HorizonsScene"
+    updateTheme("0x000000FF")
+  end if
+
   view = CreateObject("roSGNode", viewToShow)
   view.ObserveField("wasClosed", "onViewWasClosed")
 
