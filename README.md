@@ -16,3 +16,12 @@ Take any of the .zip files and upload/install to the developer application insta
 ### Development Environment
 
 This is set up for VS Code. There is an incredibly helpful extension [here](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript).
+
+### Linux Development
+ 
+Set your envionment variables
+> export ROKU_DEV_TARGET=<your ip from above>
+> export DEVPASSWORD=<rokudev password>
+
+Make
+> make install
