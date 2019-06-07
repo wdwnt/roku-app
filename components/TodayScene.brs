@@ -150,7 +150,7 @@ sub audioPlayerStateChanged()
   if (m.audio.state = "finished") then
     m.audio_track_index++
 
-    if (m.audio_track_index > 16) then m.audio_track_index = 1
+    if (m.audio_track_index > 3) then m.audio_track_index = 1
 
     changeAudioTrack()
   end if
@@ -158,7 +158,7 @@ end sub
 
 sub changeAudioTrack()
   audiocontent = createObject("RoSGNode", "ContentNode")
-  audiocontent.url = "https://wdwntnow.oseast-us-1.phoenixnap.com/music/today_at_wdw/" + m.audio_track_index.ToStr() + ".mp3"
+  audiocontent.url = "https://cdn3.wdwnt.com/music/resort_tv/" + m.audio_track_index.ToStr() + ".mp3"
 
   m.audio.content = audiocontent
   m.audio.control = "play"
