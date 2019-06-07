@@ -10,6 +10,9 @@
                     width="1920"
                     translation="[0, 0]" />
             </Group>
+            <Group id="background_overlay">
+                <Rectangle color="0x00000055" width="1520" height="1080" />
+            </Group>
             <Group id="park_info" translation="[100, 100]">
                 <Label id="name" translation="[0, 0]" color="0xFFFFFFFF">
                     <Font
@@ -19,7 +22,7 @@
                         size="100"
                     />
                 </Label>
-                <Label id="todaysHoursLabel" text="&#xe855;" translation="[0, 120]" color="0xFFFFFFFF">
+                <Label id="todaysHoursIcon" text="&#xe855;" translation="[0, 135]" color="0xFFFFFFFF">
                     <Font
                         role="font"
                         uri="pkg:/components/fonts/MaterialIcons-Regular.ttf"
@@ -27,97 +30,80 @@
                         size="60"
                     />
                 </Label>
-                <Label id="todaysHoursLabel" text="Today's Park Hours" translation="[80, 130]" color="0xFFFFFFFF">
-                    <Font
-                        role="font"
-                        uri="pkg:/components/fonts/avenirltstd-light-webfont.ttf"
-                        id="avenir-light"
-                        size="60"
-                    />
-                </Label>
-                <Label id="todaysHours" translation="[0, 200]" color="0xFFFFFFFF">
-                    <Font
-                        role="font"
-                        uri="pkg:/components/fonts/avenirltstd-light-webfont.ttf"
-                        id="avenir-light"
-                        size="60"
-                    />
-                </Label>
+                <Label id="todaysHoursLabel" text="Today's Park Hours" translation="[80, 130]" color="0xFFFFFFFF" />
+                <Label id="todaysHours" translation="[0, 200]" color="0xFFFFFFFF" />
             </Group>
             <Group id="sidebar">
                 <Rectangle
                     id="sidebar_rectangle"
-                    color="0x0088FFAB"
-                    width="500"
+                    color="0x224471DD"
+                    width="400"
                     height="1080"
-                    translation="[1420, 0]">
-                    <LayoutGroup itemSpacings="[0, 20]">
-                        <Label id="day_of_the_week" width="450" wrap="true" color="0xFFFFFFFF" />
-                        <Label id="month_day" width="450" wrap="true" color="0xFFFFFFFF" />
+                    translation="[1520, 0]">
+                    <LayoutGroup itemSpacings="[0, 20]" translation="[30, 30]">
+                        <Label id="day_of_the_week" width="450" wrap="true" color="0x8EB3DEFF" />
+                        <Label id="month_day" width="450" wrap="true" color="0x80A9D3FF" />
                         <Label id="time" width="450" wrap="true" color="0xFFFFFFFF">
                             <Font
                                 role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                                uri="pkg:/components/fonts/avenirltstd-light-webfont.ttf"
+                                id="avenir-light"
+                                size="60"
+                            />
+                        </Label>
+                        <Label id="weather_label" text="Currently" color="0x8EB3DEFF">
+                            <Font
+                                role="font"
+                                uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                                id="avenir-light"
                                 size="40"
                             />
                         </Label>
-                        <Label id="weather" width="450" wrap="true" color="0xFFFFFFFF" />
+                        <Poster id="weather_icon" width="50" height="50" />
+                        <Label id="weather" width="350" wrap="true" color="0xFFFFFFFF" />
+                        <Label id="park_hours_label" text="Park Hours" color="0x8EB3DEFF">
+                            <Font
+                                role="font"
+                                uri="pkg:/components/fonts/avenir_55_roman_latin.ttf"
+                                id="avenir-light"
+                                size="40"
+                            />
+                        </Label>
                         <Label id="mk_title" text="Magic Kindgom" color="0xFFFFFFFF">
                             <Font
                                 role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                                uri="pkg:/components/fonts/avenir_55_roman_latin.ttf"
                                 size="30"
                             />
                         </Label>
-                        <Label id="mk_hours" width="450" wrap="true" color="0xFFFFFFFF" />
+                        <Label id="mk_hours" width="350" wrap="true" color="0xFFFFFFFF" />
+                        <Rectangle height="2" width="340" color="0xFFFFFF66" />
                         <Label id="ep_title" text="Epcot" color="0xFFFFFFFF">
                             <Font
                                 role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                                uri="pkg:/components/fonts/avenir_55_roman_latin.ttf"
                                 size="30"
                             />
                         </Label>
-                        <Label id="ep_hours" width="450" wrap="true" color="0xFFFFFFFF" />
+                        <Label id="ep_hours" width="350" wrap="true" color="0xFFFFFFFF" />
+                        <Rectangle height="2" width="340" color="0xFFFFFF66" />
                         <Label id="hs_title" text="Hollywood Studios" color="0xFFFFFFFF">
                             <Font
                                 role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                                uri="pkg:/components/fonts/avenir_55_roman_latin.ttf"
                                 size="30"
                             />
                         </Label>
-                        <Label id="hs_hours" width="450" wrap="true" color="0xFFFFFFFF" />
+                        <Label id="hs_hours" width="350" wrap="true" color="0xFFFFFFFF" />
+                        <Rectangle height="2" width="340" color="0xFFFFFF66" />
                         <Label id="ak_title" text="Animal Kingdom" color="0xFFFFFFFF">
                             <Font
                                 role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                                uri="pkg:/components/fonts/avenir_55_roman_latin.ttf"
                                 size="30"
                             />
                         </Label>
-                        <Label id="ak_hours" width="450" wrap="true" color="0xFFFFFFFF" />
-                        <Label id="ds_title" text="Disney Springs" color="0xFFFFFFFF">
-                            <Font
-                                role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
-                                size="30"
-                            />
-                        </Label>
-                        <Label id="ds_hours" width="450" wrap="true" color="0xFFFFFFFF" />
-                        <Label id="tl_title" text="Typhoon Lagoon" color="0xFFFFFFFF">
-                            <Font
-                                role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
-                                size="30"
-                            />
-                        </Label>
-                        <Label id="tl_hours" width="450" wrap="true" color="0xFFFFFFFF" />
-                        <Label id="bb_title" text="Blizzard Beach" color="0xFFFFFFFF">
-                            <Font
-                                role="font"
-                                uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
-                                size="30"
-                            />
-                        </Label>
-                        <Label id="bb_hours" width="450" wrap="true" color="0xFFFFFFFF" />
+                        <Label id="ak_hours" width="350" wrap="true" color="0xFFFFFFFF" />
                     </LayoutGroup>
                 </Rectangle>
             </Group>

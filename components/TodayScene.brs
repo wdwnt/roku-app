@@ -12,8 +12,12 @@ sub OnWasShown()
   m.park_ids = [ "mk", "ep", "hs", "ak", "ds", "tl", "bb" ]
 
   m.light_font = CreateObject("roSGNode", "Font")
-  m.light_font.uri = "pkg:/components/fonts/avenir_45_book_latin.ttf"
-  m.light_font.size = 26
+  m.light_font.uri = "pkg:/components/fonts/avenir_35_light_latin.ttf"
+  m.light_font.size = 60
+
+  m.book_font = CreateObject("roSGNode", "Font")
+  m.book_font.uri = "pkg:/components/fonts/avenir_45_book_latin.ttf"
+  m.book_font.size = 24
 
   setUpLabels()
 
@@ -29,33 +33,33 @@ end sub
 sub setUpLabels()
   m.park_image = m.top.findNode("park_image")
   m.name = m.top.findNode("name")
+
   m.todaysHours = m.top.findNode("todaysHours")
+  m.todaysHours.font = m.light_font
+
+  m.todaysHoursLabel = m.top.findNode("todaysHoursLabel")
+  m.todaysHoursLabel.font = m.light_font
 
   m.day_of_the_week = m.top.findNode("day_of_the_week")
-  m.day_of_the_week.font = m.light_font
+  m.day_of_the_week.font = m.book_font
 
   m.month_day = m.top.findNode("month_day")
-  m.month_day.font = m.light_font
+  m.month_day.font = m.book_font
 
   m.time = m.top.findNode("time")
 
   m.weather = m.top.findNode("weather")
-  m.weather.font = m.light_font
+  m.weather.font = m.book_font
+  m.weather_icon = m.top.findNode("weather_icon")
 
   m.mk_hours = m.top.findNode("mk_hours")
-  m.mk_hours.font = m.light_font
+  m.mk_hours.font = m.book_font
   m.ep_hours = m.top.findNode("ep_hours")
-  m.ep_hours.font = m.light_font
+  m.ep_hours.font = m.book_font
   m.hs_hours = m.top.findNode("hs_hours")
-  m.hs_hours.font = m.light_font
+  m.hs_hours.font = m.book_font
   m.ak_hours = m.top.findNode("ak_hours")
-  m.ak_hours.font = m.light_font
-  m.ds_hours = m.top.findNode("ds_hours")
-  m.ds_hours.font = m.light_font
-  m.tl_hours = m.top.findNode("tl_hours")
-  m.tl_hours.font = m.light_font
-  m.bb_hours = m.top.findNode("bb_hours")
-  m.bb_hours.font = m.light_font
+  m.ak_hours.font = m.book_font
 end sub
 
 sub buildTasks()
@@ -119,16 +123,20 @@ sub onParksChanged()
   m.ep_hours.text = m.parks["ep"].todaysHours
   m.hs_hours.text = m.parks["hs"].todaysHours
   m.ak_hours.text = m.parks["ak"].todaysHours
-  m.ds_hours.text = m.parks["ds"].todaysHours
-  m.tl_hours.text = m.parks["tl"].todaysHours
-  m.bb_hours.text = m.parks["bb"].todaysHours
 
   updatePark()
 end sub
 
 sub onWeatherChanged()
   m.weather_info = m.WeatherTask.weather_info["weather"]
-  m.weather.text = Substitute("Currently {0}°F ({1}°C) and {2}", m.weather_info.currently_temperature_f.ToStr(), m.weather_info.currently_temperature_c.ToStr(), LCase(m.weather_info.currently_summary))
+  fahrenheit = m.weather_info.currently_temperature_f.ToStr()
+  celsius = m.weather_info.currently_temperature_c.ToStr()
+
+  unformatted_summary = m.weather_info.currently_summary
+  summary = Left(unformatted_summary, 1) + LCase(Right(unformatted_summary, Len(unformatted_summary) - 1))
+
+  m.weather.text = fahrenheit + "°F (" + celsius + "°C)" + chr(10) + summary
+  m.weather_icon.uri = Substitute("https://darksky.net/images/weather-icons/{0}.png", m.weather_info.currently_icon)
 end sub
 
 sub onDateTimeChanged()

@@ -38,7 +38,7 @@ function getCurrentTime(datetime) as string
 
   minutes = datetime.GetMinutes()
   minutes_formatted = minutes.ToStr()
-  if (minutes < 10) then minutes_formatted = Substitute("0{1}", minutes.ToStr())
+  if (minutes < 10) then minutes_formatted = "0" + minutes.ToStr()
 
   return Substitute("{0}:{1} {2}", current_hour.ToStr(), minutes_formatted, ampm)
 end function
