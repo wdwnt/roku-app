@@ -20,9 +20,9 @@ This is set up for VS Code. There is an incredibly helpful extension [here](http
 ### Linux Development
  
 Set your envionment variables
-> export ROKU_DEV_TARGET=<your ip from above>
+> export ROKU_DEV_TARGET=your ip from above
 
-> export DEVPASSWORD=<rokudev password>
+> export DEVPASSWORD=rokudev password
 
 Make
 > make install
