@@ -10,6 +10,7 @@ function executeTask() as void
     podcast_content = content.CreateChild("ContentNode")
     podcast_content.id = podcast.id
     podcast_content.title = podcast.title
+    podcast_content.shortDescriptionLine1 = podcast.title
     podcast_content.url = podcast.media_url
     podcast_content.hdPosterUrl = podcast.featured_image
 

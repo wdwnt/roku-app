@@ -3,37 +3,44 @@
     <script type="text/brightscript" uri="pkg:/components/PodcastScene.brs" />
     <children>
         <Group>
-            <LabelList
-                id="audioLabelList"
-                translation="[180, 100]"
-                focusedColor="0xFFFFFFFF"
-                focusBitmapUri=""
-                focusFootprintBitmapUri=""
-                color="0x121212FF"
-                itemSize="[500, 60]">
-                <Font
-                    role="font"
+			<PosterGrid
+				id="audioLabelList"
+				translation="[20, 20]"
+				basePosterSize="[340, 340]"
+				itemSpacing="[16, 16]"
+				caption1NumLines="1"
+				numColumns="3"
+				numRows="2">
+				<Font
+                    role="caption1Font"
                     uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
                     id="avenir-light"
                     size="30" />
-                <Font
-                    role="focusedFont"
-                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                    id="avenir-light"
-                    size="30" />
-            </LabelList>
-            <Label
-                id="episode_description"
-                width="800"
-                wrap="true"
-                color="0xFFFFFFFF"
-                translation="[800, 100]">
-                <Font
-                    role="font"
-                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                    id="avenir-light"
-                    size="30" />
-            </Label>
+			</PosterGrid>
+			<LayoutGroup itemSpacings="[0, 40]" translation="[1100, 20]">
+				<Label
+					id="episode_title"
+					width="800"
+					wrap="true"
+					color="0xFFFFFFFF">
+					<Font
+						role="font"
+						uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+						id="avenir-light"
+						size="34" />
+				</Label>
+				<Label
+					id="episode_description"
+					width="800"
+					wrap="true"
+					color="0xFFFFFFFF">
+					<Font
+						role="font"
+						uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+						id="avenir-light"
+						size="28" />
+				</Label>
+			</LayoutGroup>
         </Group>
         <Group translation="[0, -30]">
             <Rectangle

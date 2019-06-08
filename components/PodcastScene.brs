@@ -10,16 +10,12 @@ sub OnWasShown()
   ' m.global.observeField("FF", "FF")
   ' m.global.observeField("Rewind", "Rewind")
 
+  m.episode_title = m.top.findNode("episode_title")
   m.episode_description = m.top.findNode("episode_description")
 
   m.audiolist = m.top.findNode("audioLabelList")
   m.audiolist.observeField("itemFocused", "updateFocused")
   m.audiolist.observeField("itemSelected", "playaudio")
-
-  ' font = createObject("RoSGNode", "Font")
-  ' font.uri = "pkg:/components/fonts/avenir_35_light_latin.ttf"
-  ' m.audiolist.focusedFont = font
-  ' m.audiolist.font = font
 
   m.audio = createObject("RoSGNode", "Audio")
   m.audio.observeField("state", "controlaudioplay")
@@ -42,6 +38,7 @@ sub updateFocused()
   episode = getSelectedEpisode()
 
   m.show_art.uri = episode.hdPosterUrl
+  m.episode_title.text = episode.title
   m.episode_description.text = episode.Description
 end sub
 
