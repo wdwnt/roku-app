@@ -21,8 +21,6 @@ function setUpLabels() as void
   m.current_track_artist_name = m.top.findNode("current_track_artist_name")
   m.current_show_name = m.top.findNode("current_show_name")
   m.current_show_image_path = m.top.findNode("current_show_image_path")
-  m.next_track_title = m.top.findNode("next_track_title")
-  m.next_track_artist_name = m.top.findNode("next_track_artist_name")
 
   m.audio_indicator = m.top.findNode("audio_indicator")
 end function
@@ -40,7 +38,7 @@ end function
 
 function setUpAudio() as void
   audiocontent = createObject("RoSGNode", "ContentNode")
-  audiocontent.url = "https://wdwnt.out.airtime.pro/wdwnt_a"
+  audiocontent.url = "https://streaming.live365.com/a31769"
 
   m.audio = m.top.findNode("audio_player")
   m.audio.content = audiocontent
@@ -79,6 +77,4 @@ sub onCurrentInfoChanged()
   m.current_track_artist_name.text = current_info.current_track_artist_name
   m.current_show_name.text = current_info.current_show_name
   m.current_show_image_path.uri = current_info.current_show_image_path
-  m.next_track_title.text = current_info.next_track_title
-  m.next_track_artist_name.text = current_info.next_track_artist_name
 end sub

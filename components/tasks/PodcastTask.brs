@@ -5,6 +5,7 @@ function executeTask() as void
   content = createObject("roSGNode", "ContentNode")
   htmlRegex = CreateObject("roRegex", "<.*?>", "")
   apostropheRegex = CreateObject("roRegex", "&#8217;", "")
+  carriageReturnRegex = CreateObject("roRegex", "\n\n", "")
 
   for each podcast in json
     podcast_content = content.CreateChild("ContentNode")
@@ -16,6 +17,7 @@ function executeTask() as void
 
     description = htmlRegex.ReplaceAll(podcast.content, "")
     description = apostropheRegex.ReplaceAll(description, "'")
+    description = carriageReturnRegex.ReplaceAll(description, chr(10))
     podcast_content.Description = description
   end for
 

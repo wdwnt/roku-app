@@ -32,7 +32,7 @@ end sub
 function ShowView(selectedIndex as integer)
   viewToShow = "NTunesScene"
 
-  if selectedIndex = 0 then
+  if selectedIndex = 0 or selectedIndex = 1 then
     updateTheme("0x121212FF")
   end if
 

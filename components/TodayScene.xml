@@ -56,7 +56,7 @@
                                 role="font"
                                 uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
                                 id="avenir-light"
-                                size="40"
+                                size="30"
                             />
                         </Label>
                         <Poster id="weather_icon" width="50" height="50" />

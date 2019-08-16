@@ -4,7 +4,6 @@ end sub
 
 sub OnWasShown()
   m.play_bar = m.top.findNode("play_bar")
-  m.show_art = m.top.findNode("show_art")
   m.Play = m.top.findNode("Play")
 
   ' m.global.observeField("FF", "FF")
@@ -37,7 +36,6 @@ end function
 sub updateFocused()
   episode = getSelectedEpisode()
 
-  m.show_art.uri = episode.hdPosterUrl
   m.episode_title.text = episode.title
   m.episode_description.text = episode.Description
 end sub
@@ -53,26 +51,26 @@ sub playaudio()
   m.Play.text = "O"
 end sub
 
-sub controlaudioplay()
-  if (m.audio.state = "finished")
-    m.audio.control = "stop"
-    m.audio.control = "none"
-    m.Play.text = "N"
-  end if
-end sub
+' sub controlaudioplay()
+'   if (m.audio.state = "finished")
+'     m.audio.control = "stop"
+'     m.audio.control = "none"
+'     m.Play.text = "N"
+'   end if
+' end sub
 
-function onKeyEvent(key as String,press as Boolean) as Boolean
-  if press then
-    if key = "back"
-      if (m.audio.state = "playing")
-        m.audio.control = "stop"
-        m.Play.text = "N"
-        return true
-      end if
-    end if
-  end if
-  return false
-end function
+' function onKeyEvent(key as String,press as Boolean) as Boolean
+'   if press then
+'     if key = "back"
+'       if (m.audio.state = "playing")
+'         m.audio.control = "stop"
+'         m.Play.text = "N"
+'         return true
+'       end if
+'     end if
+'   end if
+'   return false
+' end function
 
 ' sub FF()
 '     skip10Seconds(true)

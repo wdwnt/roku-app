@@ -2,88 +2,67 @@
 <component name="NTunesScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd" initialFocus="audio_control_button">
     <script type="text/brightscript" uri="pkg:/components/NTunesScene.brs" />
     <children>
-        <Group id="ntunesGroup">
-            <Group id="artwork">
-                <Poster
-                    id="current_show_image_path"
-                    width="500"
-                    height="500"
-                    translation="[100, 100]" />
-            </Group>
-            <Group id="song_info" translation="[700, 100]">
-                <Label id="title" text="Now Playing" color="0xFFFFFFFF">
-                    <Font
-                        role="font"
-                        uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
-                        id="avenir-light"
-                        size="80"
-                    />
-                </Label>
-                <LayoutGroup translation="[0, 120]">
-                    <Label id="current_show_name" color="0xFFFFFFFF">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                            id="avenir-light"
-                            size="30"
-                        />
-                    </Label>
-                    <Label id="current_track_title" text="Loading..." color="0xFFFFFFFF" width="1200" wrap="true">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_45_book_latin.ttf"
-                            id="avenir-light"
-                            size="65"
-                        />
-                    </Label>
-                    <Label id="current_track_artist_name" color="0xFFFFFFFF">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                            id="avenir-light"
-                            size="40"
-                        />
-                    </Label>
-                </LayoutGroup>
-                <LayoutGroup translation="[0, 400]">
-                    <Label id="next_track_info_title" text="Up Next" color="0xFFFFFFFF">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_45_book_latin.ttf"
-                            id="avenir-light"
-                            size="45"
-                        />
-                    </Label>
-                    <Label id="next_track_title" color="0xFFFFFFFF">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                            id="avenir-light"
-                            size="30"
-                        />
-                    </Label>
-                    <Label id="next_track_artist_name" color="0xFFFFFFFF">
-                        <Font
-                            role="font"
-                            uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
-                            id="avenir-light"
-                            size="30"
-                        />
-                    </Label>
-                </LayoutGroup>
-            </Group>
-            <Group id="audio_indicator_group" translation="[960, 900]">
-                <Label id="audio_indicator" text="N" color="0xFFFFFFFF">
-                    <Font
-                        role="font"
-                        uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
-                        id="sosa-regular"
-                        size="150"
-                    />
-                </Label>
-            </Group>
+        <Label id="title"
+            text="Now Playing"
+            color="0xFFFFFFFF"
+            translation="[20, 20]">
+            <Font
+                role="font"
+                uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                id="avenir-light"
+                size="30"
+            />
+        </Label>
+        <Poster
+            id="current_show_image_path"
+            width="500"
+            height="500"
+            translation="[710, 100]" />
+        <LayoutGroup translation="[0, 650]">
+            <Label id="current_show_name"
+                color="0xFFFFFFFF"
+                horizAlign="center"
+                width="1920">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                    id="avenir-light"
+                    size="30"
+                />
+            </Label>
+            <Label id="current_track_title" text="Loading..."
+                color="0xFFFFFFFF"
+                horizAlign="center"
+                width="1920"
+                wrap="true">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/avenir_85_heavy_latin.ttf"
+                    id="avenir-heavy-latin"
+                    size="65"
+                />
+            </Label>
+            <Label id="current_track_artist_name"
+                color="0xFFFFFFFF"
+                horizAlign="center"
+                width="1920">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/avenir_35_light_latin.ttf"
+                    id="avenir-light"
+                    size="40"
+                />
+            </Label>
+            <Label id="audio_indicator" text="N" color="0xFFFFFFFF" horizAlign="center" width="1920">
+                <Font
+                    role="font"
+                    uri="pkg:/components/fonts/sosa-regular-webfont.ttf"
+                    id="sosa-regular"
+                    size="150"
+                />
+            </Label>
             <Audio id="audio_player" />
             <Timer id="refresh_timer" repeat="true" duration="10" />
-        </Group>
+        </LayoutGroup>
     </children>
 </component>

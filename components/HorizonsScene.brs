@@ -17,7 +17,7 @@ sub OnWasShown()
   m.left_side_row_2_status = m.top.findNode("left_side_row_2_status")
 
   audiocontent = createObject("RoSGNode", "ContentNode")
-  audiocontent.url = "https://cdn3.wdwnt.com/music/Epcot%20-%20Horizons%20(Full%20Audio).mp3"
+  audiocontent.url = "https://appcdn.wdwnt.com/roku/music/Epcot%20-%20Horizons%20(Full%20Audio).mp3"
 
   m.audio = m.top.findNode("audio")
   m.audio.content = audiocontent

@@ -158,7 +158,7 @@ end sub
 
 sub changeAudioTrack()
   audiocontent = createObject("RoSGNode", "ContentNode")
-  audiocontent.url = "https://cdn3.wdwnt.com/music/resort_tv/" + m.audio_track_index.ToStr() + ".mp3"
+  audiocontent.url = "https://appcdn.wdwnt.com/roku/music/resort_tv/" + m.audio_track_index.ToStr() + ".mp3"
 
   m.audio.content = audiocontent
   m.audio.control = "play"
