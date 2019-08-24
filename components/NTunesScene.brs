@@ -38,7 +38,7 @@ end function
 
 function setUpAudio() as void
   audiocontent = createObject("RoSGNode", "ContentNode")
-  audiocontent.url = "https://streaming.live365.com/a31769"
+  audiocontent.url = "http://edge1-b.exa.live365.net/a31769"
 
   m.audio = m.top.findNode("audio_player")
   m.audio.content = audiocontent
