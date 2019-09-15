@@ -20,7 +20,9 @@ function setUpLabels() as void
   m.current_track_title = m.top.findNode("current_track_title")
   m.current_track_artist_name = m.top.findNode("current_track_artist_name")
   m.current_show_name = m.top.findNode("current_show_name")
+
   m.current_show_image_path = m.top.findNode("current_show_image_path")
+  m.background = m.top.findNode("background")
 
   m.audio_indicator = m.top.findNode("audio_indicator")
 end function
@@ -77,4 +79,5 @@ sub onCurrentInfoChanged()
   m.current_track_artist_name.text = current_info.current_track_artist_name
   m.current_show_name.text = current_info.current_show_name
   m.current_show_image_path.uri = current_info.current_show_image_path
+  m.background.uri = current_info.current_show_image_path
 end sub

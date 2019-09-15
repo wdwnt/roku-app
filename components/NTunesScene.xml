@@ -2,6 +2,17 @@
 <component name="NTunesScene" extends="SGDEXComponent" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd" initialFocus="audio_control_button">
     <script type="text/brightscript" uri="pkg:/components/NTunesScene.brs" />
     <children>
+        <Poster id="background"
+            loadHeight="10.8"
+            loadWidth="19.2"
+            height="1080"
+            width="1920"
+            loadDisplayMode="scaleToFill" />
+        <Poster
+            id="current_show_image_path"
+            width="500"
+            height="500"
+            translation="[710, 100]" />
         <Label id="title"
             text="Now Playing"
             color="0xFFFFFFFF"
@@ -13,11 +24,6 @@
                 size="30"
             />
         </Label>
-        <Poster
-            id="current_show_image_path"
-            width="500"
-            height="500"
-            translation="[710, 100]" />
         <LayoutGroup translation="[0, 650]">
             <Label id="current_show_name"
                 color="0xFFFFFFFF"
