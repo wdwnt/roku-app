@@ -3,8 +3,8 @@
     <script type="text/brightscript" uri="pkg:/components/NTunesScene.brs" />
     <children>
         <Poster id="background"
-            loadHeight="10.8"
-            loadWidth="19.2"
+            loadHeight="86.4"
+            loadWidth="153.6"
             height="1080"
             width="1920"
             loadDisplayMode="scaleToFill" />
@@ -13,8 +13,9 @@
             width="500"
             height="500"
             translation="[710, 100]" />
+        <Rectangle height="80" width="1920" color="0x22447134" />
         <Label id="title"
-            text="Now Playing"
+            text="WDWNTunes - Now Playing"
             color="0xFFFFFFFF"
             translation="[20, 20]">
             <Font

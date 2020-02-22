@@ -1,5 +1,5 @@
 function executeTask() as void
-  urlTransfer = createUrlTransfer("https://wdwntnowapi.azurewebsites.net/api/v2/mobile/parks/wdw")
+  urlTransfer = createUrlTransfer("https://wdwnt-now-api.herokuapp.com/api/parks?sort=true")
   json = getJson(urlTransfer)
 
   parks = CreateObject("roAssociativeArray")

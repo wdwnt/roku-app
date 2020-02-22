@@ -14,6 +14,7 @@ function executeTask() as void
     podcast_content.shortDescriptionLine1 = podcast.title
     podcast_content.url = podcast.media_url
     podcast_content.hdPosterUrl = podcast.featured_image
+    podcast_content.streamFormat = "mp3"
 
     description = htmlRegex.ReplaceAll(podcast.content, "")
     description = apostropheRegex.ReplaceAll(description, "'")

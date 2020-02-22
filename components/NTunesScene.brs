@@ -41,6 +41,7 @@ end function
 function setUpAudio() as void
   audiocontent = createObject("RoSGNode", "ContentNode")
   audiocontent.url = "http://edge1-b.exa.live365.net/a31769"
+  audiocontent.streamFormat = "mp3"
 
   m.audio = m.top.findNode("audio_player")
   m.audio.content = audiocontent
@@ -62,15 +63,15 @@ function playAudio() as void
   end if
 end function
 
-function onKeyEvent(key as String, press as Boolean) as Boolean
+function onKeyEvent(key as string, press as boolean) as boolean
   handled = false
 
   if press then
     if (key = "play") then
       playAudio()
       handled = true
-    endif
-  endif
+    end if
+  end if
 end function
 
 sub onCurrentInfoChanged()
