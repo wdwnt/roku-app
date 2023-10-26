@@ -2,7 +2,7 @@
 
 <component name="TodayParkHoursTask" extends="BaseTask">
     <interface>
-        <field id="parks" type="associativearray" />
+        <field id="parks" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="TodayParkHoursTask.brs" />

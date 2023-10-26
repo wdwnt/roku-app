@@ -1,12 +1,12 @@
 function executeTask() as void
-  urlTransfer = createUrlTransfer("https://vip.timezonedb.com/v2/get-time-zone?key=[key]&by=position&lat=28.4160036778&lng=-81.5811902834&format=json")
+  urlTransfer = createUrlTransfer("https://worldtimeapi.org/api/timezone/America/New_York")
   json = getJson(urlTransfer)
 
   datetime_info = CreateObject("roAssociativeArray")
   datetime_node = CreateObject("roSGNode", "DateTimeNode")
 
   datetime = CreateObject("roDateTime")
-  datetime.FromISO8601String(json.formatted)
+  datetime.FromISO8601String(json.datetime)
 
   datetime_node.day_of_the_week = datetime.GetWeekday()
   datetime_node.month_day = getMonthDay(datetime)
@@ -18,7 +18,7 @@ function executeTask() as void
 end function
 
 function getMonthDay(datetime) as string
-  months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
+  months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   month = months[datetime.GetMonth() - 1]
 
   dayOfMonth = datetime.GetDayOfMonth().ToStr()
