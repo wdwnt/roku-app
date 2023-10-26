@@ -9,7 +9,7 @@ sub OnWasShown()
 
   m.parks = []
   m.park_id_index = 0
-  m.park_ids = [ "mk", "ep", "hs", "ak", "ds", "tl", "bb" ]
+  m.park_ids = ["mk", "ep", "hs", "ak", "ds", "tl", "bb"]
 
   m.light_font = CreateObject("roSGNode", "Font")
   m.light_font.uri = "pkg:/components/fonts/avenir_35_light_latin.ttf"
@@ -136,7 +136,7 @@ sub onWeatherChanged()
   summary = Left(unformatted_summary, 1) + LCase(Right(unformatted_summary, Len(unformatted_summary) - 1))
 
   m.weather.text = fahrenheit + "°F (" + celsius + "°C)" + chr(10) + summary
-  m.weather_icon.uri = Substitute("https://darksky.net/images/weather-icons/{0}.png", m.weather_info.currently_icon)
+  ' m.weather_icon.uri = Substitute("https://darksky.net/images/weather-icons/{0}.png", m.weather_info.currently_icon)
 end sub
 
 sub onDateTimeChanged()

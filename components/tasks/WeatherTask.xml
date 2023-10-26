@@ -2,7 +2,7 @@
 
 <component name="WeatherTask" extends="BaseTask">
     <interface>
-        <field id="weather_info" type="associativearray" />
+        <field id="weather_info" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="WeatherTask.brs" />

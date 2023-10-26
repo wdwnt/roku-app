@@ -2,7 +2,7 @@
 
 <component name="DateTimeTask" extends="BaseTask">
     <interface>
-        <field id="datetime_info" type="associativearray" />
+        <field id="datetime_info" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="DateTimeTask.brs" />

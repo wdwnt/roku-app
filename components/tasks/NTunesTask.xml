@@ -2,7 +2,7 @@
 
 <component name="NTunesTask" extends="BaseTask">
     <interface>
-        <field id="current_info" type="associativearray" />
+        <field id="current_info" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="NTunesTask.brs" />
